@@ -6,7 +6,7 @@ class Xx < Formula
   homepage "https://github.com/gallardo994/xx-cli"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "__BASE_URL__/__FILE_NAME_MAC_ARM64_"
+    url "__BASE_URL__/__FILE_NAME_MAC_ARM64__"
     sha256 "__SHA_MAC_ARM64__"
   elsif OS.linux? && Hardware::CPU.intel?
     url "__BASE_URL__/__FILE_NAME_LINUX_X86_64__"
