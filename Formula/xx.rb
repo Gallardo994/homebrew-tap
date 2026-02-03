@@ -6,7 +6,7 @@ class Xx < Formula
   homepage "https://github.com/gallardo994/xx-cli"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.0/__FILE_NAME_MAC_ARM64_"
+    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.0/xx-macos-arm64-release"
     sha256 "1b2c11130b7f7324c2ac0721c8ccd7958fe6edc7a2fde4a1f2e839357f1fb5c9"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.0/xx-linux-x86_64-release"
