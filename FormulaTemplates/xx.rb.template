@@ -1,0 +1,36 @@
+# typed: false
+# frozen_string_literal: true
+
+class XxCli < Formula
+  desc "A per‑project alias tool"
+  homepage "https://github.com/gallardo994/xx-cli"
+
+  if OS.mac? && Hardware::CPU.arm?
+    url "__URL_MAC_ARM__"
+    sha256 "__SHA_MAC_ARM__"
+  elsif OS.linux? && Hardware::CPU.intel?
+    url "__URL_LINUX_INTEL__"
+    sha256 "__SHA_LINUX_INTEL__"
+  elsif OS.linux? && Hardware::CPU.arm?
+    url "__URL_LINUX_ARM__"
+    sha256 "__SHA_LINUX_ARM__"
+  else
+    odie "Unsupported platform – no binary available for #{OS.kernel_name} #{Hardware::CPU.arch}"
+  end
+
+  version "__VERSION__"
+  license "MIT"
+
+  head do
+    url "https://github.com/gallardo994/xx-cli.git", branch: "main"
+  end
+
+  def install
+    bin.install "xx"
+  end
+
+  test do
+    output = shell_output("#{bin}/xx --help")
+    assert_match "xx", output
+  end
+end
