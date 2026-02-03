@@ -26,7 +26,9 @@ class Xx < Formula
   end
 
   def install
-    bin.install "xx"
+    bin.install "xx-build_macos_latest_llvm_20_release" => "xx" if OS.mac? && Hardware::CPU.arm?
+    bin.install "xx-build_ubuntu_latest_llvm_20_release" => "xx" if OS.linux? && Hardware::CPU.intel?
+    bin.install "xx-build_ubuntu_24.04_arm_llvm_20_release" => "xx" if OS.linux? && Hardware::CPU.arm?
   end
 
   test do
