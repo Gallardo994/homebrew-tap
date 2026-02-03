@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class XxCli < Formula
+class Xx < Formula
   desc "A per-project alias tool"
   homepage "https://github.com/gallardo994/xx-cli"
 
