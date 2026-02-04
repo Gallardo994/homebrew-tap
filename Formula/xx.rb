@@ -6,19 +6,19 @@ class Xx < Formula
   homepage "https://github.com/gallardo994/xx-cli"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.0/xx-macos-arm64-release"
-    sha256 "1b2c11130b7f7324c2ac0721c8ccd7958fe6edc7a2fde4a1f2e839357f1fb5c9"
+    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.1/xx-macos-arm64-release"
+    sha256 "da4e5408a7abff68e4cacf17e2053b879e398b9ff11b5a3081cbb6f57d0e1c5e"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.0/xx-linux-x86_64-release"
-    sha256 "4177191d72909df8f5514475a137d3043bba2d27d5ddb085e1f6de58d3303c99"
+    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.1/xx-linux-x86_64-release"
+    sha256 "fd82a4351870d6a0fe5d4336df0600471c46e181622e17c32a1408b2656433cd"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.0/xx-linux-arm64-release"
-    sha256 "2b63a54f54af5c1eec114ddcdb9f1e3600e4c3421660308c3789701fa84dbe40"
+    url "https://github.com/Gallardo994/xx-cli/releases/download/0.9.1/xx-linux-arm64-release"
+    sha256 "1b518d38004b0acd13718eccd54b2be2f80fafc7f748cf06f93a1cc1fe9a9f74"
   else
     odie "Unsupported platform – no binary available for #{OS.kernel_name} #{Hardware::CPU.arch}"
   end
 
-  version "0.9.0"
+  version "0.9.1"
   license "MIT"
 
   head do
